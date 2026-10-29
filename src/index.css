@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #FAF7EE;
+    --bg-cream-card: #FFFFFF;
+    --bg-cream-alt: #F4EFE3;
+    --line-crimson: #7E2231;
+    --line-crimson-light: rgba(126, 34, 49, 0.18);
+    --text-primary: #332624;
+    --text-muted: #6B5550;
+    --pastel-blush: #F9DDD6;
+    --pastel-blush-dark: #E8AFA4;
+    --pastel-sage: #DDE8D4;
+    --pastel-sage-dark: #8BA878;
+    --pastel-butter: #FEF3C7;
+    --pastel-butter-dark: #F59E0B;
+    --pastel-sky: #E0F2FE;
+    --pastel-sky-dark: #38BDF8;
+    --pastel-lavender: #EBE5F7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+::selection {
+  background: #F5CAC2;
+  color: #7E2231;
+}
+
+/* Custom whimsical scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2D9C8;
+  border-radius: 9999px;
+  border: 2px solid #FAF7EE;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CDBFA9;
+}
+
+/* Scrapbook typography */
+.font-cursive {
+  font-family: 'Caveat', cursive;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
+
+.font-typewriter {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Scrapbook decorative helpers */
+.paper-card {
+  background: #FFFFFF;
+  border: 1.5px solid #7E2231;
+  border-radius: 18px;
+  box-shadow: 3px 3px 0px rgba(126, 34, 49, 0.15);
+}
+
+.paper-card-soft {
+  background: #FFFFFF;
+  border: 1px solid rgba(126, 34, 49, 0.16);
+  border-radius: 18px;
+  box-shadow: 2px 3px 0px rgba(126, 34, 49, 0.08);
+}
+
+/* Washi tape strip decoration */
+.tape-strip {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 70px;
+  height: 22px;
+  background-color: rgba(249, 221, 214, 0.85);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(126, 34, 49, 0.25);
+  border-right: 2px dashed rgba(126, 34, 49, 0.25);
+  z-index: 20;
+}
+
+.tape-strip-alt {
+  position: absolute;
+  top: -9px;
+  right: 18px;
+  transform: rotate(3deg);
+  width: 60px;
+  height: 20px;
+  background-color: rgba(221, 232, 212, 0.85);
+  border-left: 2px dashed rgba(93, 122, 79, 0.3);
+  border-right: 2px dashed rgba(93, 122, 79, 0.3);
+  z-index: 20;
+}
+
+/* Highlighter tape effect (like "ILUSTRACIÓN" in the reference) */
+.highlighter-blush {
+  background: linear-gradient(120deg, rgba(249, 221, 214, 0.9) 0%, rgba(245, 202, 194, 0.85) 100%);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.highlighter-sage {
+  background: linear-gradient(120deg, rgba(221, 232, 212, 0.9) 0%, rgba(197, 216, 184, 0.85) 100%);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.highlighter-butter {
+  background: linear-gradient(120deg, rgba(254, 243, 199, 0.95) 0%, rgba(253, 230, 138, 0.9) 100%);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Subtle hand-drawn border doodle effect */
+.doodle-border {
+  border: 1.5px solid #7E2231;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
